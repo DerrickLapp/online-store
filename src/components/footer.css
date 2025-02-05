@@ -1,4 +1,6 @@
 .footer{
+    background-color: brown;
+    color: yellow;
     display: flex;
     justify-content: center;
     margin-top: auto;

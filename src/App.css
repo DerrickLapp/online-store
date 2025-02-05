@@ -1,6 +1,6 @@
 body{
   height: 100%;
-  background-color: lightgray;
+  background-color: burlywood !important;
 }
 
 .App {
@@ -10,8 +10,9 @@ body{
 }
 
 .main-content{
-  min-height: calc(100vh - 141.81px);
+  min-height: 100vh;
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -46,4 +47,8 @@ body{
   to {
     transform: rotate(360deg);
   }
+}
+
+.page {
+  min-height: 90vh;
 }
