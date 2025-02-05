@@ -1,10 +1,27 @@
 .navbar-menu{
     padding: 5px;
     display: flex;
-    justify-content: space-around;
-    height: 60px;
+    justify-content: space-between;
+    height: 75px;
     align-items: center;
     background-color: brown;
+}
+
+@media (max-width: 480px) {
+    .navbar-menu h1{
+        font-size: 18px;
+    }
+}
+.navbar-menu h1{
+    display: flex;
+    text-align: center;
+    justify-content: start;
+}
+
+.menu-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 a {
@@ -14,6 +31,7 @@ a {
     letter-spacing: 1px !important;
     font-weight: bolder !important;
     text-decoration: none !important;
+    margin-left: 10px;
 }
 
 a:hover{
@@ -21,4 +39,15 @@ a:hover{
     background-color: black !important;
     border: 1px solid black !important;
     border-radius: 5px !important;
+}
+
+.left-logo{
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.left-logo img{
+    width: 50px;
+    height: 68px;
 }
