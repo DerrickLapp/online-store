@@ -1,0 +1,9 @@
+.catalog .filters{
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.catalog .filters button{
+    margin-right: 5px;
+}
