@@ -3,10 +3,12 @@
     border-radius: 5px;
     margin-bottom: 10px;
     margin-right: 10px;
-    background-color: black;
+    background-image: url(/public/images/YGOCardBack.jpg);
+    background-size: 165%;
+    background-position: center;
 
     width: 240px;
-    height: 400px;
+    height: 420px;
     display: inline-block;
     justify-content: center;
     vertical-align: top;
@@ -18,7 +20,7 @@
 }
 
 .product h4{
-    height: 65px;
+    height: 80px;
     color: yellow;
     text-align: center;
     align-content: center;

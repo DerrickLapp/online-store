@@ -1,0 +1,66 @@
+.admin {
+    padding-top: 15px;
+}
+
+.admin .prodpon{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.admin .manageProducts , .admin .coupons{
+    background-color: brown;
+    color: orange;
+    margin-top: 25px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 5px;
+    text-align: left;
+}
+
+.admin .manageProducts h4, .admin .coupons h4{
+    text-align: center;
+}
+
+.admin .manageProducts{
+    width: 500px;
+}
+
+.admin .coupons{
+    width: 450px;
+}
+
+.admin label{
+    margin-top: 10px;
+}
+
+.admin input{
+    background-color: burlywood;
+}
+
+.admin button{
+    margin-top: 10px;
+}
+.admin button:hover{
+    border: 1px solid burlywood;
+    border-radius: 5px;
+    background-color: black;
+    color: orange;
+}
+.admin .btncontrols{
+    text-align: right;
+}
+
+.admin .catediv{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.admin .catedrop{
+    border-radius: 5px;
+    width: 250px;
+}

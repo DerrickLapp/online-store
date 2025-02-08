@@ -1,0 +1,14 @@
+.about{
+    padding-top: 20px;
+}
+
+.about h5{
+    font-family: Roboto;
+}
+
+.about button:hover{
+    background-color: brown;
+    color: yellow;
+    border: 1px solid black;
+    border-radius: 5px;
+}
