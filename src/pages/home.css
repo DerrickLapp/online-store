@@ -1,0 +1,43 @@
+.home{
+    position: relative;
+    padding: 20px;
+}
+
+.home h1{
+    text-align: center;
+}
+
+.home img{
+    padding: 10px;
+    width: 625px;
+    height: 975px;
+}
+
+.home #cardLogoName{
+    max-width:  25vw;
+    position: absolute;
+    top: 10%;
+    left: 38%;
+    height: 180px;
+}
+
+.home .catelink a{
+    position: absolute;
+    top: 76.5%;
+    left: 37%;
+    word-wrap: normal;
+    width: 425px;
+    font-size: 28px !important;
+    text-transform: uppercase !important;
+    color: black !important;
+    letter-spacing: 1px !important;
+    font-weight: bolder !important;
+    text-decoration: none !important;
+    text-align: start;
+
+}
+
+.home .catelink a:hover{
+    color: brown !important;
+    font-size: 32px !important;
+}
