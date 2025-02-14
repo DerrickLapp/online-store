@@ -51,3 +51,8 @@
     background-color: brown;
     color: yellow;
 }
+
+.pricentotal{
+    display: flex;
+    justify-content: space-evenly;
+}

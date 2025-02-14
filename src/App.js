@@ -7,6 +7,7 @@ import About from './pages/about';
 import Admin from './pages/admin';
 import Home from './pages/home';
 import Cart from './pages/cart';
+import Contact from './pages/contact';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/admin" element={<Admin></Admin>}></Route>
           <Route path="/about" element={<About></About>}></Route>
           <Route path="/cart" element={<Cart></Cart>}></Route>
+          <Route path="/contact" element={<Contact></Contact>}></Route>
         </Routes> 
 
         <Footer></Footer>

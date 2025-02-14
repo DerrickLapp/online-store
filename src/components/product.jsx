@@ -22,9 +22,14 @@ function Product(props){
                 <button onClick={add} className='btn btn-sm btn-warning add-btn'>Add</button>
             </div>
 
-            <label>
-                Price: ${props.data.price}
-            </label>
+            <div className='pricentotal'>
+                <label>
+                    Price: ${props.data.price}
+                </label>
+                <label>
+                    Total: $
+                </label>
+            </div>
         </div>
     );
 }
