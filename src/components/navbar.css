@@ -59,7 +59,7 @@
     background-color: burlywood !important;
     border: 1px solid yellow;
     border-radius: 5px !important;
-    font-size: 36px !important;
+    font-size: 34px !important;
 }
 
 .left-logo{
@@ -80,5 +80,17 @@
 }
 
 .cartDiv{
+    display: flex;
+    flex-direction: column;
     padding-right: 20px;
+}
+
+.cartLink{
+    justify-content: right;
+    text-align: end;
+}
+
+.user-info{
+    border: 1px solid goldenrod;
+    border-radius: 4px;
 }

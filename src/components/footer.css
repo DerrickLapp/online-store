@@ -5,3 +5,11 @@
     justify-content: center;
     margin-top: auto;
 }
+.footer h4{
+    margin-right: 10px;
+}
+
+.footer .copyright{
+    padding: 2px;
+    font-size: 24px;
+}

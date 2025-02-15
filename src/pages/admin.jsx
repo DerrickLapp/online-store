@@ -96,7 +96,7 @@ function Admin(){
 
                     </div>
                     <div className="btncontrols">
-                        <button className='btn btn-sm btn-warning' onClick={saveNewCard}>Submit Card to Catalog</button>
+                        <button className='btn btn-sm btn-warning' onClick={saveNewCard}><i class="fa-solid fa-clipboard-check"></i> Submit Card to Catalog</button>
                     </div>
 
                     {allnewcards.map(anc =><li>{anc.cname} - {anc.ccat} - ${anc.cprice}</li>)}
@@ -116,7 +116,7 @@ function Admin(){
                         <input type="number" className="form-control" onBlur={handleCoupon} name="discount" />
                     </div>
                     <div className="btncontrols">
-                        <button className='btn btn-sm btn-warning' onClick={saveCoupon}>Apply</button>
+                        <button className='btn btn-sm btn-warning' onClick={saveCoupon}><i class="fa-regular fa-square-check"></i> Apply</button>
                     </div>
 
                     {allcoupons.map(ac =><li>{ac.code} - {ac.discount}%</li>)}

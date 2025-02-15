@@ -1,9 +1,14 @@
+import { useContext } from 'react';
 import './navbar.css';
 
 import {Link} from 'react-router-dom';
+import DataContext from '../stateManagement/dataContext';
 
 
 function Navbar(){
+
+    const user = useContext(DataContext).user
+
     return (
         <div>
             <nav>
@@ -22,7 +27,14 @@ function Navbar(){
                         </div>
                     </div>
                     <div className='cartDiv'>
-                        <Link to="./cart">Cart</Link>
+                        <a href='#' className='user-info'>
+                            <i class="fa-regular fa-circle-user"></i>: 
+                            {user.name}
+                        </a>
+                        <Link className="cartLink" to="./cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Cart
+                        </Link>
                     </div>
                 </div>
             </nav>

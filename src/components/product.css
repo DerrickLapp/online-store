@@ -55,4 +55,12 @@
 .pricentotal{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+}
+
+.pricentotal .total{
+    font-size: larger;
+    color: goldenrod;
+    font-weight: 700;
+    text-transform: uppercase;
 }
