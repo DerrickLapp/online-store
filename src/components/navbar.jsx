@@ -7,7 +7,20 @@ import DataContext from '../stateManagement/dataContext';
 
 function Navbar(){
 
-    const user = useContext(DataContext).user
+    const user = useContext(DataContext).user;
+    const cart = useContext(DataContext).cart;
+
+    //calculates the total number of products in the cart
+    function getProdsInCart() {
+        let sum = 0;
+        for(let i=0; i<cart.length; i++){
+            let prod = cart[i];
+            sum += prod.quantity;
+        }
+
+        return sum;
+
+    }
 
     return (
         <div>
@@ -28,11 +41,12 @@ function Navbar(){
                     </div>
                     <div className='cartDiv'>
                         <a href='#' className='user-info'>
-                            <i class="fa-regular fa-circle-user"></i>: 
+                            <i class="fa-regular fa-circle-user"></i>:
                             {user.name}
                         </a>
                         <Link className="cartLink" to="./cart">
-                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span className='badge'>{getProdsInCart()}</span>
+                            <i class="fa-solid fa-cart-shopping"></i> 
                             Cart
                         </Link>
                     </div>

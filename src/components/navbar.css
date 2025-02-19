@@ -90,7 +90,21 @@
     text-align: end;
 }
 
+
 .user-info{
     border: 1px solid goldenrod;
     border-radius: 4px;
+}
+
+.cartDiv .badge{
+    color: yellow;
+    background-color: brown;
+    border: 1px solid yellow;
+    margin-right: 4px;
+    padding: 5px !important;
+}
+.cartDiv .badge:hover{
+    color: black;
+    background-color: brown;
+    border: 1px solid black;
 }
