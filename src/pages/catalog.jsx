@@ -80,7 +80,7 @@ function Catalog(){
                 {categories.map(cate => <button className='btn btn-sm btn-warning catebtn'>{cate}</button>)}
             </div>
 
-            {catalog.map(prod => <Product data= {prod}></Product>)}
+            {catalog.map(prod => <Product key={prod._id} data= {prod}></Product>)}
         </div>
     );
 }

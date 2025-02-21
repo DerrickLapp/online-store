@@ -5,3 +5,58 @@
 .cart h1{
     text-align: center;
 }
+
+.cart .cartParent{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.cart .cartProds{
+    flex: 3;
+}
+
+.cart .side-menu{
+    flex: 1;
+    padding-top: 20px;
+}
+
+.cart .side-menu button{
+    margin-top: 40px;
+}
+.cart .side-menu button:hover{
+    background-color: brown;
+    color: yellow;
+    text-transform: uppercase;
+}
+
+.cart .prod-in-cart{
+    display: flex;
+    align-items: center;
+    border: 1px solid brown;
+    border-radius: 3px;
+    margin-bottom: 12px;
+    justify-content: space-between;
+}
+
+.cart .cartProds label{
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.cart .cartProds img{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    width: 160px;
+    height: 240px;
+}
+
+.cart .prod-in-cart h5{
+    flex: 3;
+}
+
+.cart .prod-in-cart label{
+    flex: 1;
+}
