@@ -38,7 +38,7 @@ function Product(props){
                     Price: ${props.data.price}
                 </label>
                 <label className='total'>
-                    Total: ${props.data.price * qpicked}
+                    Total: ${(props.data.price * qpicked).toFixed(2)}
                 </label>
             </div>
         </div>
