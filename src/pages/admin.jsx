@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './admin.css';
+import DataService from '../services/dataService';
 
 
 function Admin(){
@@ -12,11 +13,26 @@ function Admin(){
         discount: "",
     });
     const [newcard, setNewCard] = useState({
-        cname: "",
-        cprice: "",
-        cimage: "",
-        ccat: "",
+        title: "",
+        price: "",
+        image: "",
+        category: "",
     });
+
+    async function loadProducts() {
+        const cardData = await DataService.getProducts();
+        setAllNewCards(cardData);
+    };
+    async function loadCoupons() {
+        const couponData = await DataService.getCoupons();
+        setAllCoupons(couponData);
+    };
+
+    useEffect(
+        function(){
+            loadProducts();
+            loadCoupons();
+    }, []);
 
 
     function handleCoupon(e){
@@ -40,22 +56,35 @@ function Admin(){
 
     function handleNewCard(nc){
         const nctext = nc.target.value;
-        const ncname = nc.target.name;
+        const title = nc.target.name;
 
         let cardcopy = {...newcard};
-        cardcopy[ncname] = nctext;
+        cardcopy[title] = nctext;
         setNewCard(cardcopy);
     }
 
     function saveCoupon(){
         console.log(coupon);
+
+        let dccopy = {...coupon};
+        dccopy.discount = parseFloat(dccopy.discount);
+        let savedCoupon = DataService.saveCoupon(dccopy);
+        
+
         let couponcopies = [...allcoupons];
         couponcopies.push(coupon);
         setAllCoupons(couponcopies);
     }
 
-    function saveNewCard(){
+    async function saveNewCard(){
         console.log(newcard);
+
+        let nccopy = {...newcard};
+        nccopy.price = parseFloat(nccopy.price); // parse str into a float
+        let savedProd = await DataService.saveProduct(nccopy);
+        console.log(savedProd);
+        
+
         let newcardcopies = [...allnewcards];
         newcardcopies.push(newcard);
         setAllNewCards(newcardcopies);
@@ -74,19 +103,19 @@ function Admin(){
 
                     <div>
                         <label className='form-label'>Card Name:</label>
-                        <input type="text" className="form-control" onBlur={handleNewCard} name="cname"/>
+                        <input type="text" className="form-control" onBlur={handleNewCard} name="title"/>
                     </div>
                     <div>
                         <label className='form-label'>Price:</label>
-                        <input type="number" className="form-control" onBlur={handleNewCard} name="cprice"/>
+                        <input type="number" className="form-control" onBlur={handleNewCard} name="price"/>
                     </div>
                     <div>
                         <label className='form-label'>Card Image:</label>
-                        <input type="text" className="form-control" onBlur={handleNewCard} name="cimage" />
+                        <input type="text" className="form-control" onBlur={handleNewCard} name="image" />
                     </div>
                     <div className='catediv'>
                         <label className='form-label'>Category:</label>
-                        <select className='catedrop' onBlur={handleNewCard} name="ccat">
+                        <select className='catedrop' onBlur={handleNewCard} name="category">
                             <option value="">--Select an Option--</option>
                             <option value="Main Deck Monster">Main Deck Monster</option>
                             <option value="Extra Deck Monster">Extra Deck Monster</option>
@@ -99,7 +128,7 @@ function Admin(){
                         <button className='btn btn-sm btn-warning' onClick={saveNewCard}><i class="fa-solid fa-clipboard-check"></i> Submit Card to Catalog</button>
                     </div>
 
-                    {allnewcards.map(anc =><li>{anc.cname} - {anc.ccat} - ${anc.cprice}</li>)}
+                    {allnewcards.map(anc =><li>{anc.title} - {anc.category} - ${anc.price}</li>)}
 
 
                 </div>
